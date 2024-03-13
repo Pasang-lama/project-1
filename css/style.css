@@ -1,0 +1,210 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+}
+
+ul {
+  list-style: none;
+}
+ul li {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+
+.custom-btn {
+  color: black;
+}
+.custom-btn a {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  position: relative;
+}
+.custom-btn a::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  width: 60%;
+  height: 2px;
+  background-color: black;
+  bottom: -5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.custom-btn a:hover::after {
+  width: 100%;
+}
+
+.section-margin {
+  margin-top: 80px;
+}
+
+.section-heading {
+  font-size: 36px !important;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.section-heading span {
+  font-weight: 700;
+}
+
+.products-card .products-images {
+  position: relative;
+  overflow: hidden;
+}
+.products-card .products-images .second-img {
+  display: none;
+}
+.products-card .products-images .add-to-cart {
+  position: absolute;
+  bottom: -50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 80%;
+  text-transform: uppercase;
+  background-color: white;
+  padding: 10px;
+  font-weight: 700;
+  border: none;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+.products-card .products-images .add-to-cart:hover {
+  background-color: rgb(166, 165, 165);
+}
+.products-card .products-details .category {
+  color: gray;
+}
+.products-card .products-details .price span {
+  color: #C32929;
+}
+.products-card:hover .products-images .second-img {
+  display: block;
+}
+.products-card:hover .products-images .first-img {
+  display: none;
+}
+.products-card:hover .products-images .add-to-cart {
+  bottom: 5%;
+}
+
+header nav .navbar-nav .nav-item {
+  margin-right: 20px;
+}
+header nav .navbar-nav .nav-item .nav-link {
+  text-transform: uppercase;
+  font-family: "Jost", sans-serif;
+  font-size: 14px;
+  color: black;
+  position: relative;
+  padding: 0px;
+}
+header nav .navbar-nav .nav-item .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  width: 0%;
+  height: 1px;
+  background-color: black;
+  bottom: -5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+header nav .navbar-nav .nav-item .nav-link:hover::after {
+  width: 100%;
+}
+
+.cart-info ul li {
+  padding-right: 20px;
+}
+.cart-info ul li:last-child {
+  padding-right: 0px;
+}
+
+.banner-section {
+  background-image: url("/images/slideshow-pattern.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-color: #f5e6e0;
+}
+.banner-section .banner-content span {
+  color: #C32929;
+  position: relative;
+  padding-left: 60px;
+}
+.banner-section .banner-content span::before {
+  content: "";
+  width: 50px;
+  height: 1px;
+  background-color: #C32929;
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.banner-section .banner-content div {
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.banner-section .banner-content p {
+  font-size: 18px;
+  text-transform: uppercase;
+}
+
+.tranding-products .nav-tabs {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+  border-bottom: none !important;
+}
+.tranding-products .nav-tabs .nav-item .nav-link {
+  border: none !important;
+  text-transform: uppercase;
+  font-size: 16px;
+  color: rgb(46, 46, 46);
+  font-weight: 700;
+  position: relative;
+}
+.tranding-products .nav-tabs .nav-item .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  width: 0%;
+  height: 1px;
+  background-color: black;
+  bottom: 0px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+.tranding-products .nav-tabs .nav-item .nav-link:hover::after {
+  width: 100%;
+}
+.tranding-products .nav-tabs .nav-item .nav-link.active {
+  color: red;
+}
+.tranding-products .nav-tabs .nav-item .nav-link.active::after {
+  width: 100%;
+}
+.tranding-products .tab-content {
+  margin-top: 40px;
+}/*# sourceMappingURL=style.css.map */

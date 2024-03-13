@@ -1,0 +1,75 @@
+.banner-section {
+  background-image: url("/images/slideshow-pattern.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-color: #f5e6e0;
+  .banner-content {
+    span {
+      color: $primary-color;
+      position: relative;
+      padding-left: 60px;
+      &::before {
+        content: "";
+        width: 50px;
+        height: 1px;
+        background-color: $primary-color;
+        position: absolute;
+        left: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+    div {
+      font-size: 56px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+    p {
+      font-size: 18px;
+      text-transform: uppercase;
+    }
+  }
+}
+
+.tranding-products{
+  .nav-tabs{
+    justify-content: center;
+    gap: 20px;
+    border-bottom: none !important;
+    .nav-item{
+      .nav-link{
+        border: none !important;
+        text-transform: uppercase;
+        font-size: 16px;
+        color: rgb(46, 46, 46);
+        font-weight: 700;
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          left: 0px;
+          width: 0%;
+          height: 1px;
+          background-color: black;
+          bottom: 0px;
+          transition:  0.5s ;
+        }
+        &:hover{
+          &::after {
+            width: 100%;
+            }
+        }
+      }
+      .nav-link.active{
+        color: red;
+        &::after {
+          width: 100%;
+          }
+      }
+    }
+  }
+  .tab-content{
+    margin-top: 40px;
+  }
+}

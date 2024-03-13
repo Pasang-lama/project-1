@@ -1,0 +1,113 @@
+@import "variable";
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  font-family: "Jost", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: black;
+}
+
+ul {
+  list-style: none;
+  li {
+    display: inline-block;
+  }
+}
+
+a {
+  text-decoration: none !important;
+  color: inherit !important;
+}
+.custom-btn {
+  color: black;
+  a {
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0px;
+      width: 60%;
+      height: 2px;
+      background-color: black;
+      bottom: -5px;
+      transition: 0.5s;
+    }
+    &:hover {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.section-margin {
+  margin-top: 80px;
+}
+
+.section-heading {
+  font-size: 36px !important;
+  text-align: center;
+  margin-bottom: 40px;
+  span {
+    font-weight: 700;
+  }
+}
+
+.products-card {
+  .products-images {
+    position: relative;
+    overflow: hidden;
+    .second-img {
+      display: none;
+    }
+    .add-to-cart {
+      position: absolute;
+      bottom: -50%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 80%;
+      text-transform: uppercase;
+      background-color: white;
+      padding: 10px;
+      font-weight: 700;
+      border: none;
+      transition: all 0.3s linear;
+      &:hover {
+        background-color: rgb(166, 165, 165);
+      }
+    }
+  }
+  .products-details {
+    .category {
+      color: gray;
+    }
+
+    .price {
+      span {
+        color: $primary-color;
+      }
+    }
+  }
+  &:hover {
+    .products-images {
+      .second-img {
+        display: block;
+      }
+      .first-img {
+        display: none;
+      }
+      .add-to-cart {
+        bottom: 5%;
+      }
+    }
+  }
+}
